@@ -1,0 +1,39 @@
+<script>
+    const produto = document.querySelector(".produto");
+  
+    //Função para excluir um item da lista
+    const excluirProduto =
+      ("submit",
+      (event) => {
+        if (event.target.contains(".produto")) {
+          produto.innerHTML = ``;
+        }
+      });
+  </script>
+  
+  
+  <body>
+  <div class="listaDeItens">
+    <div class="produto">
+      <input type="submit" value="EXCLUIR" />
+      <p class="descricaoProduto">ITEM QUE DEVE SER EXCLUIDO</p>
+    </div>
+    <br />
+    <div class="produto">
+      <input type="submit" value="EXCLUIR" />
+      <p class="descricaoProduto">ITEM QUE DEVE SER EXCLUIDO</p>
+    </div>
+  </div>
+  //Função para excluir um item da lista
+const excluirProduto = btn => btn.closest('.produto').remove();
+<div class="listaDeItens">
+  <div class="produto">
+    <button type="button" value="EXCLUIR" onclick="excluirProduto(this)" />
+    <p class="descricaoProduto">ITEM QUE DEVE SER EXCLUIDO</p>
+  </div>
+  <br />
+  <div class="produto">
+    <button type="button" value="EXCLUIR" onclick="excluirProduto(this)" />
+    <p class="descricaoProduto">ITEM QUE DEVE SER EXCLUIDO</p>
+  </div>
+</div>
